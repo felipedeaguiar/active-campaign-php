@@ -3,7 +3,7 @@
 include_once 'vendor/autoload.php';
 
 
-$ac = new ActiveCampaign\ActiveCampaign();
+$ac = new ActiveCampaign\ActiveCampaign('https://marketing.com');
 
 
 

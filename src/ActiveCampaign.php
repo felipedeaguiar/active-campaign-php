@@ -14,8 +14,11 @@ class ActiveCampaign{
     protected $client;
     protected $apiVersion;
 
-	function __construct(){
+	function __construct($url){
 
+		if(empty($url)){
+			throw new \Exception("A Api Url não pode ser nula.");			
+		}
         $this->setApiVersion(1);
 		$this->contact = new Contact($this);
 	
